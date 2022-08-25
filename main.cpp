@@ -42,7 +42,7 @@ void ordenamiento_asc (FILE* f1, FILE* f2, FILE* f3, int tot1, int tot2) //La fu
         fread(&num1, sizeof(int), 1, f1);
         fread(&num2, sizeof(int), 1, f2);
 
-        if ( num1 < num2 )  //¿Porque si pongo los 2 fread de arriba en el if no funciona igual que de esta manera?
+        if ( num1 < num2 )
         {
             fseek(f2, (-1)* sizeof (int) , SEEK_CUR);
             fwrite(&num1, sizeof(int), 1, f3);
